@@ -46,6 +46,10 @@
     export CLICOLOR=1
     export LSCOLORS=ExFxBxDxCxegedabagacad
 
+# 	Set hist file size
+	export HISTSIZE=5000
+	export HISTFILESIZE=5000
+
 
 #   -----------------------------
 #   2.  MAKE TERMINAL BETTER
@@ -77,7 +81,16 @@ mcd () { mkdir -p "$1" && cd "$1"; }        # mcd:          Makes new Dir and ju
 trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the MacOS trash
 ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in MacOS Quicklook Preview
 alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file on MacOS Desktop
-alias so='source .bash_profile'
+
+# Shortcuts
+alias so='source ~/.bash_profile'
+alias g='cd ~/dev/git_repos/'
+alias euler='cd ~/dev/git_repos/ProjectEulerSolutions/'
+alias leet='cd ~/dev/git_repos/leetcodeSolutions/'
+alias dots='cd ~/dev/git_repos/dotfiles/'
+alias desk='cd ~/Desktop/'
+alias docs='cd ~/Documents/'
+alias down='cd ~/Downloads/'
 
 #   lr:  Full Recursive Directory Listing
 #   ------------------------------------------
